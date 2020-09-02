@@ -1,0 +1,44 @@
+<html>
+<head>
+<title>deck.py</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #cc7832;}
+.s1 { color: #a9b7c6;}
+.s2 { color: #808080;}
+.s3 { color: #6897bb;}
+.s4 { color: #6a8759;}
+</style>
+</head>
+<body bgcolor="#2b2b2b">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+deck.py</font>
+</center></td></tr></table>
+<pre><span class="s0">import </span><span class="s1">random</span>
+<span class="s0">from </span><span class="s1">card </span><span class="s0">import </span><span class="s1">Card</span>
+<span class="s2">#Wrapper class for an array of cards, has a shuffle function</span>
+
+<span class="s0">class </span><span class="s1">Deck:</span>
+    <span class="s0">def </span><span class="s1">__init__(self</span><span class="s0">, </span><span class="s1">game_display):</span>
+        <span class="s1">self.cards = []</span>
+        <span class="s1">self.game_display = game_display</span>
+        <span class="s0">for </span><span class="s1">_ </span><span class="s0">in </span><span class="s1">range(</span><span class="s3">1</span><span class="s1">):</span>
+            <span class="s0">for </span><span class="s1">val </span><span class="s0">in </span><span class="s1">(</span><span class="s3">1</span><span class="s0">, </span><span class="s3">2</span><span class="s0">, </span><span class="s3">3</span><span class="s0">, </span><span class="s3">4</span><span class="s0">, </span><span class="s3">5</span><span class="s0">, </span><span class="s3">6</span><span class="s0">, </span><span class="s3">7</span><span class="s0">, </span><span class="s3">8</span><span class="s0">, </span><span class="s3">9</span><span class="s0">, </span><span class="s3">10</span><span class="s0">, </span><span class="s3">11</span><span class="s0">, </span><span class="s3">12</span><span class="s0">, </span><span class="s3">13</span><span class="s1">):</span>
+                <span class="s0">for </span><span class="s1">suit </span><span class="s0">in </span><span class="s1">(</span><span class="s4">&quot;H&quot;</span><span class="s0">, </span><span class="s4">&quot;S&quot;</span><span class="s0">, </span><span class="s4">&quot;C&quot;</span><span class="s0">, </span><span class="s4">&quot;D&quot;</span><span class="s1">):</span>
+                    <span class="s1">self.cards.append(Card(val</span><span class="s0">, </span><span class="s1">suit</span><span class="s0">, </span><span class="s1">self.game_display))</span>
+
+    <span class="s0">def </span><span class="s1">shuffle_deck(self):</span>
+        <span class="s1">random.shuffle(self.cards)</span>
+        <span class="s1">print(</span><span class="s4">&quot;shuffling cards...&quot;</span><span class="s1">)</span>
+
+    <span class="s0">def </span><span class="s1">__str__(self):</span>
+        <span class="s1">deck_string = </span><span class="s4">&quot;&quot;</span>
+        <span class="s1">deck = self.cards</span>
+        <span class="s0">for </span><span class="s1">card </span><span class="s0">in </span><span class="s1">deck:</span>
+            <span class="s1">deck_string += str(card)</span>
+        <span class="s0">return </span><span class="s1">deck_string</span>
+</pre>
+</body>
+</html>
