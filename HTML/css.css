@@ -1,0 +1,157 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #00e699;
+  /* debug */
+  padding-bottom: 50px;
+  /* debug */
+}
+/* HEAD */
+.H-header {
+  background-color: #ccccb3;
+  color: #8080ff;
+  text-align: center;
+  padding: 20px;
+  font-size: 50px;
+  font-family: "Helvetica";
+}
+/* HEAD */
+
+/* NAVBAR */
+.nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #60C9D0;
+}
+
+.nav li {
+  font-family: Helvetica;
+  float: left;
+  border-right: solid 1px #fff;
+}
+
+.nav li:last-child {
+  float: right;
+  border-right: none;
+}
+
+.nav li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 16px 16px;
+  text-decoration: none;
+}
+
+.nav li a:hover:not(.active) {
+  background-color: #55ACEE;
+  color: #FFFFFF;
+}
+
+.nav .active {
+  background-color: #CCD6DD;
+  color: black;
+}
+
+/* NAVBAR */
+
+/* Photo Links */
+.ql {
+  text-align: center;
+  margin-top: 15px;
+  font-size: 25px;
+}
+
+.gallery-holder{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  border: 5px outset #E1E8ED;
+  width: 80%;
+  height: 75%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.gallery {
+  border: 3px #66757F solid;
+  margin: 2%;
+}
+
+.gallery a {
+  text-decoration: none;
+}
+
+.gallery:hover {
+  border: 3px black solid;
+}
+
+.des {
+  padding: 2%;
+  text-align: center;
+  text-decoration: none;
+  font-size: 25px;
+  font-family: Helvetica;
+  color: black;
+}
+
+/* Photo Links */
+
+/* Content */
+.contenthead {
+  text-align: center;
+  font-size: 40px;
+  padding: 10px;
+  text-decoration: underline;
+  color: #ffcc66;
+}
+
+.contentmain img {
+  display: block;
+  width: 80%;
+  height: 75%;
+  margin-right: auto;
+  margin-left: auto;
+  border: 3px outset #66757F ;
+}
+
+.contentmain h2 {
+  margin-left: 3em;
+  margin-top: 1em;
+  color: #66757F;
+  font-size: 26px;
+}
+
+.contentmain h3 {
+  margin-left: 2em;
+  font-style: italic;
+}
+
+.contentmain p {
+  margin-left: 2em;
+  font-size: 25px;
+}
+
+/* Content */
+
+/* Credits */
+.A-body {
+  color: #292F33;
+  padding:20px;
+}
+
+.A-body h2 {
+  font-size: 45px;
+}
+
+.A-body h3 {
+  font-size: 25px;
+  margin-left: 3em;
+}
+
+/* Credits */
