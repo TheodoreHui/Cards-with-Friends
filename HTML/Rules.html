@@ -1,0 +1,35 @@
+<Html>
+  <head>
+     <title> SPIS 2020 - - - Rules </title>
+    <link rel="stylesheet" type="text/css" href="css.css">
+    <meta name="viewport" content="widtd=device-width, initial-scale=1.0">
+  </head>
+  <body>
+    <div class="H-header">
+      <div class="H-head">
+        <h1>Cards with Friends</h1>
+      </div>
+    </div>
+
+    <div class="nav">
+      <ul>
+        <li><a href="index.html"> Home </a></li>
+        <li><a href="Game.html"> Game </a></li>
+        <li><a class="active" href="Rules.html"> Rules </a></li>
+        <li><a href="Instructions.html"> How to Play</a></li>
+        <li class="about"><a href="about.html"> About </a></li>
+      </ul>
+    </div>
+    
+    <div class="contenthead">
+      <h1>Rules</h1>
+    </div>
+    <div class="contentmain">
+    <h1><center>Adding a functional game:</center></h1>  
+  <p>
+The original idea for this project was for an online version of the cardgame Mao. However, due to time constraints, the end product game was cut short to just a demo. With this model, the game mechanic of adding new rules could easily be implemented with ad-lib options for new rules.
+</p>
+<h1><center>How scripts communicate:</center></h1>
+<p>Currently, all data is translated into strings, wrapped in a Pickle library object, then sent via socket. This is horribly inefficient as these strings need to be unpickled, then further decomposed and casted into usable data. The Pickle library does support packaging more complicated objects such as lists and dictionaries, however this was skipped for the sake of simplicity. However, this leads to messy string decomposition and lots of if comparisons, very messy to debug. Also, the fact that this was written to python bars the client from easily becoming embedded in an html website. If this had been done in JavaScript, Flask, Nodejs and Socket.io already exist to easily deliver code to browsers. </p>
+    </div>
+  </body>

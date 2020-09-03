@@ -1,0 +1,38 @@
+<Html>
+  <head>
+     <title> SPIS 2020 - - - How to Play </title>
+    <link rel="stylesheet" type="text/css" href="css.css">
+    <meta name="viewport" content="widtd=device-width, initial-scale=1.0">
+  </head>
+  <body>
+    <div class="H-header">
+      <div class="H-head">
+        <h1>Cards with Friends</h1>
+      </div>
+    </div>
+
+    <div class="nav">
+      <ul>
+        <li><a href="index.html"> Home </a></li>
+        <li><a href="Game.html"> Game </a></li>
+        <li><a href="Rules.html"> Rules </a></li>
+        <li><a class="active" href="Instructions.html"> How to Play</a></li>
+        <li class="about"><a href="about.html"> About </a></li>
+      </ul>
+    </div>
+    
+    <div class="contenthead">
+      <h1>How to Play</h1>
+    </div>
+    <div class="contentmain">
+     <p>
+This project is an all-python framework for multiplayer games, made for the UCSD 2020 SPIS Program by Theodore Hui and Nikunj. Both of us started SPIS with no knowledge of Python, with Theo only taking AP CS in high school and Nik a few HTML classes. Using pygame, a small demo game is implemented to showcase client/server relationship. A combination of threading and socket libraries allows for connection and communication between a server script and any number of client scripts. While the default ip is localhost, a port-forwarded connection could theoretically allow for a true online experience, with each player only needing to run the client script.
+</p>
+<h1><center>How to run this demo</center><h1>
+
+<p>Once the project has been imported, running the server.py file will print out the ip being used to host the server. This must be copy and pasted into the client file under the constant SERVER (the current value is my local computer ip, so you can't ddos me or anything, nice try buddy.) After setting the ip, any number of clients can be run on the local network and should be synced up.</p>
+
+<h1><center>How do multiplayer games work?</center></h1>
+<p>Every client connects to a central server, each continuously pinging the server for realtime updates to data in addition to sending any client-side changes to data, in this example cards. The server stores a copy of all the cards in the deck, which is continuously updated in real time to match client decks. When the server detects a change in card position, that position change is sent out to all other clients. This way, when a new client is added, it can be initialized and synced with concurrently running clients, resulting in a shared display between all clients.<p>  
+    </div>
+  </body>
